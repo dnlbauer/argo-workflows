@@ -108,7 +108,7 @@ class IoArgoprojWorkflowV1alpha1WorkflowStatus(ModelNormal):
             'compressed_nodes': (str,),  # noqa: E501
             'conditions': ([IoArgoprojWorkflowV1alpha1Condition],),  # noqa: E501
             'estimated_duration': (int,),  # noqa: E501
-            'finished_at': (datetime,),  # noqa: E501
+            'finished_at': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'message': (str,),  # noqa: E501
             'nodes': ({str: (IoArgoprojWorkflowV1alpha1NodeStatus,)},),  # noqa: E501
             'offload_node_status_version': (str,),  # noqa: E501
@@ -197,7 +197,7 @@ class IoArgoprojWorkflowV1alpha1WorkflowStatus(ModelNormal):
             compressed_nodes (str): Compressed and base64 decoded Nodes map. [optional]  # noqa: E501
             conditions ([IoArgoprojWorkflowV1alpha1Condition]): Conditions is a list of conditions the Workflow may have. [optional]  # noqa: E501
             estimated_duration (int): EstimatedDuration in seconds.. [optional]  # noqa: E501
-            finished_at (datetime): Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.. [optional]  # noqa: E501
+            finished_at (bool, date, datetime, dict, float, int, list, str, none_type): Time at which this workflow completed. [optional]  # noqa: E501
             message (str): A human readable message indicating details about why the workflow is in this condition.. [optional]  # noqa: E501
             nodes ({str: (IoArgoprojWorkflowV1alpha1NodeStatus,)}): Nodes is a mapping between a node ID and the node's status.. [optional]  # noqa: E501
             offload_node_status_version (str): Whether on not node status has been offloaded to a database. If exists, then Nodes and CompressedNodes will be empty. This will actually be populated with a hash of the offloaded data.. [optional]  # noqa: E501
@@ -297,7 +297,7 @@ class IoArgoprojWorkflowV1alpha1WorkflowStatus(ModelNormal):
             compressed_nodes (str): Compressed and base64 decoded Nodes map. [optional]  # noqa: E501
             conditions ([IoArgoprojWorkflowV1alpha1Condition]): Conditions is a list of conditions the Workflow may have. [optional]  # noqa: E501
             estimated_duration (int): EstimatedDuration in seconds.. [optional]  # noqa: E501
-            finished_at (datetime): Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.. [optional]  # noqa: E501
+            finished_at (bool, date, datetime, dict, float, int, list, str, none_type): Time at which this workflow completed. [optional]  # noqa: E501
             message (str): A human readable message indicating details about why the workflow is in this condition.. [optional]  # noqa: E501
             nodes ({str: (IoArgoprojWorkflowV1alpha1NodeStatus,)}): Nodes is a mapping between a node ID and the node's status.. [optional]  # noqa: E501
             offload_node_status_version (str): Whether on not node status has been offloaded to a database. If exists, then Nodes and CompressedNodes will be empty. This will actually be populated with a hash of the offloaded data.. [optional]  # noqa: E501

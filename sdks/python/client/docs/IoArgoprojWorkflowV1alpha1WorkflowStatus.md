@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **compressed_nodes** | **str** | Compressed and base64 decoded Nodes map | [optional] 
 **conditions** | [**[IoArgoprojWorkflowV1alpha1Condition]**](IoArgoprojWorkflowV1alpha1Condition.md) | Conditions is a list of conditions the Workflow may have | [optional] 
 **estimated_duration** | **int** | EstimatedDuration in seconds. | [optional] 
-**finished_at** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
+**finished_at** | **bool, date, datetime, dict, float, int, list, str, none_type** | Time at which this workflow completed | [optional] 
 **message** | **str** | A human readable message indicating details about why the workflow is in this condition. | [optional] 
 **nodes** | [**{str: (IoArgoprojWorkflowV1alpha1NodeStatus,)}**](IoArgoprojWorkflowV1alpha1NodeStatus.md) | Nodes is a mapping between a node ID and the node&#39;s status. | [optional] 
 **offload_node_status_version** | **str** | Whether on not node status has been offloaded to a database. If exists, then Nodes and CompressedNodes will be empty. This will actually be populated with a hash of the offloaded data. | [optional] 

@@ -9837,7 +9837,14 @@
         },
         "finishedAt": {
           "description": "Time at which this node completed",
-          "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "hostNodeName": {
           "description": "HostNodeName name of the Kubernetes node on which the Pod is running, if applicable",
@@ -11854,7 +11861,14 @@
         },
         "finishedAt": {
           "description": "Time at which this workflow completed",
-          "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "message": {
           "description": "A human readable message indicating details about why the workflow is in this condition.",
